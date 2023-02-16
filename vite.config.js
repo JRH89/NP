@@ -1,8 +1,9 @@
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite';
 
-// vite.config.js
-export default defineConfig ({
-    // config options
-    base: '/NP/',
-    
-  })
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: ['dependency-name'], // add the name of the dependency here
+    },
+  },
+});
